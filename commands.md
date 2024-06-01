@@ -1,4 +1,4 @@
-# Here is list of commands that are used in the installation of Next Cloud of Raspberry Pi 3
+ # Here is list of commands that are used in the installation of Next Cloud of Raspberry Pi 3
 # In order of apperance in the video
 # Between the commands are also lines that are explaining some trouble shooting steps
 
@@ -21,4 +21,4 @@ cd nextcloud
 # create and insert (copy) the content from the docekr-compose.yml in this repository
 sudo nano docker-compose.yml
 sudo chmod 777 docekr-compose.yml
-
+sudo
