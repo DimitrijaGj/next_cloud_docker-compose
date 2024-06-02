@@ -16,7 +16,7 @@ services:
     image: nextcloud
     container_name: nextcloud
     ports:
-      - "8085:80"
+      - "8085:80" #change right side on which port will be exposed. Leave left (:80) as it is !!!
     volumes:
       - /home/pi/nextcloud:/var/www/html
       - /media/usbdrive:/data
