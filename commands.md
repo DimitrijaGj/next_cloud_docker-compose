@@ -19,8 +19,13 @@ sudo docker-compose --version
 # preparing and installing Next Cloud 
 sudo mkdir -p nextcloud
 cd nextcloud
-# create and insert (copy) the content from the docekr-compose.yml in this repository
+# create and insert (copy) the content from the docker-compose.yml in this repository
 sudo nano docker-compose.yml
 sudo chmod 777 docekr-compose.yml
-#edit hte fstab file to mount the external hard drive on a start up
-sudo  
+
+# edit hte fstab file to mount the external hard drive on a start up
+sudo blkid /dev/sda1
+# copy the UUID part
+sudo nano /etc/fstab
+# paste UUID in the line like this
+<paste UUID here> <mount point> ext4 rw, realtime 0 0
