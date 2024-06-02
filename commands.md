@@ -23,9 +23,16 @@ cd nextcloud
 sudo nano docker-compose.yml
 sudo chmod 777 docekr-compose.yml
 
+# before we can mount the external HDD we need t ocreate mounting point in this case with
+sudo mkdir -p /mnt/nc
+
 # edit hte fstab file to mount the external hard drive on a start up
 sudo blkid /dev/sda1
 # copy the UUID part
 sudo nano /etc/fstab
 # paste UUID in the line like this
-<paste UUID here> <mount point> ext4 rw, realtime 0 0
+<paste UUID here> <mounting point> ext4 rw, realtime 0 0
+
+# reset the daemon and mount
+sudo daemon-reload
+mount -a
