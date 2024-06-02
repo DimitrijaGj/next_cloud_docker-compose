@@ -34,5 +34,20 @@ sudo nano /etc/fstab
 <paste UUID here> <mounting point> ext4 rw, realtime 0 0
 
 # reset the daemon and mount
-sudo daemon-reload
+systemctl daemon-reload
 mount -a
+df -h
+
+# also edit the docker-compose file in order to add external HDD as a volume
+sudo nano docker-compose.yml
+
+# to check which containers are running 
+sudo docker ps
+
+# to restart docker compose
+sudo docker compose kill
+sudo docker compose up -d
+
+# Enter Your Admin Credentials (do not forget them) You will need them for the first log in after next cloud is installed
+
+
